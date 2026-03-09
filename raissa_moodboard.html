@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moodboard & Linha Editorial — Raíssa</title>
+<link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Century+Gothic&family=Century+Schoolbook&display=swap" rel="stylesheet">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Nunito:wght@300;400;600;700&display=swap');
+
+  :root {
+    --cream: #FAF5EE;
+    --warm-white: #FDF9F4;
+    --blush: #E8C4B0;
+    --terracotta: #C4764A;
+    --sage: #8FA886;
+    --deep-green: #3D5A4C;
+    --mocha: #6B4A3A;
+    --text: #2C1F1A;
+    --light-text: #8A7060;
+    --accent: #D4956A;
+    --soft-pink: #F0D5C8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--cream);
+    font-family: 'Nunito', sans-serif;
+    color: var(--text);
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(145deg, var(--deep-green) 0%, #2A4038 60%, var(--mocha) 100%);
+    padding: 80px 60px 70px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,149,106,0.25) 0%, transparent 70%);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -60px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(143,168,134,0.2) 0%, transparent 70%);
+  }
+  .hero-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--blush);
+    opacity: 0.8;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Calistoga', serif;
+    font-size: 64px;
+    color: var(--warm-white);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .hero h1 span {
+    color: var(--accent);
+  }
+  .hero-sub {
+    font-size: 14px;
+    color: rgba(253,249,244,0.6);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* SECTION STRUCTURE */
+  .section {
+    padding: 70px 60px;
+  }
+  .section-alt {
+    background-color: var(--warm-white);
+  }
+  .section-dark {
+    background-color: var(--deep-green);
+    color: var(--warm-white);
+  }
+
+  .section-title {
+    font-family: 'Calistoga', serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 8px;
+  }
+  .section-dark .section-title {
+    color: var(--blush);
+  }
+  .section-heading {
+    font-family: 'Calistoga', serif;
+    font-size: 38px;
+    line-height: 1.15;
+    color: var(--text);
+    margin-bottom: 40px;
+  }
+  .section-dark .section-heading {
+    color: var(--warm-white);
+  }
+
+  /* PALETA */
+  .palette-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .swatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .swatch-color {
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  }
+  .swatch-name {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--light-text);
+    font-weight: 700;
+  }
+  .swatch-hex {
+    font-size: 11px;
+    color: var(--light-text);
+    opacity: 0.7;
+  }
+
+  /* FONTES */
+  .font-demo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  .font-card {
+    background: var(--warm-white);
+    border-radius: 20px;
+    padding: 36px;
+    border: 1.5px solid rgba(196,118,74,0.15);
+  }
+  .section-dark .font-card {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(255,255,255,0.12);
+  }
+  .font-tag {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+  .section-dark .font-tag {
+    color: var(--blush);
+  }
+  .font-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--light-text);
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+  }
+  .section-dark .font-name {
+    color: rgba(253,249,244,0.5);
+  }
+  .font-display-poster {
+    font-family: 'Calistoga', serif;
+    font-size: 46px;
+    line-height: 1.1;
+    color: var(--text);
+  }
+  .section-dark .font-display-poster {
+    color: var(--warm-white);
+  }
+  .font-display-deco {
+    font-family: 'Century Gothic', 'Century Schoolbook', sans-serif;
+    font-size: 32px;
+    line-height: 1.3;
+    color: var(--text);
+  }
+  .section-dark .font-display-deco {
+    color: var(--warm-white);
+  }
+
+  /* MOCK POSTS */
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 10px;
+  }
+  .post-mock {
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    aspect-ratio: 4/5;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+  }
+  .post-1 {
+    background: linear-gradient(170deg, #3D5A4C 0%, #2A4038 100%);
+  }
+  .post-2 {
+    background: linear-gradient(160deg, #FAF5EE 0%, #F0D5C8 100%);
+  }
+  .post-3 {
+    background: linear-gradient(160deg, #6B4A3A 0%, #3D2B22 100%);
+  }
+  .post-tag {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px;
+    opacity: 0.7;
+  }
+  .post-1 .post-tag, .post-3 .post-tag { color: var(--blush); }
+  .post-2 .post-tag { color: var(--terracotta); }
+  .post-title {
+    line-height: 1.15;
+  }
+  .post-1 .post-title, .post-3 .post-title { color: var(--warm-white); }
+  .post-2 .post-title { color: var(--text); }
+  .post-poster { font-family: 'Calistoga', serif; font-size: 26px; }
+  .post-deco {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .post-accent-line {
+    width: 36px; height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin-bottom: 10px;
+  }
+  .post-2 .post-accent-line { background: var(--terracotta); }
+  .post-deco-badge {
+    position: absolute;
+    top: 20px; right: 20px;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+  }
+  .post-2 .post-deco-badge {
+    background: rgba(61,90,76,0.12);
+  }
+
+  /* FUNIL */
+  .funnel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .funnel-card {
+    border-radius: 20px;
+    padding: 32px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .funnel-top {
+    background: linear-gradient(145deg, #3D5A4C, #2A4038);
+    color: var(--warm-white);
+  }
+  .funnel-mid {
+    background: linear-gradient(145deg, #C4764A, #A55E38);
+    color: var(--warm-white);
+  }
+  .funnel-bot {
+    background: linear-gradient(145deg, #6B4A3A, #3D2B22);
+    color: var(--warm-white);
+  }
+  .funnel-label {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .funnel-title {
+    font-family: 'Calistoga', serif;
+    font-size: 26px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+  }
+  .funnel-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .funnel-items li {
+    font-size: 13px;
+    line-height: 1.5;
+    opacity: 0.9;
+    padding-left: 16px;
+    position: relative;
+  }
+  .funnel-items li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    opacity: 0.6;
+  }
+  .funnel-num {
+    position: absolute;
+    top: 24px; right: 28px;
+    font-family: 'Calistoga', serif;
+    font-size: 80px;
+    opacity: 0.07;
+    line-height: 1;
+  }
+
+  /* STORIES */
+  .stories-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+  .story-mock {
+    border-radius: 16px;
+    aspect-ratio: 9/16;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+  }
+  .story-1 { background: linear-gradient(175deg, var(--deep-green), #1A2E26); }
+  .story-2 { background: linear-gradient(175deg, #E8C4B0, #C4948A); }
+  .story-3 { background: linear-gradient(175deg, #3D2B22, var(--mocha)); }
+  .story-4 { background: linear-gradient(175deg, var(--sage), #6B8A72); }
+  .story-5 { background: linear-gradient(175deg, #FAF5EE, #F0D5C8); }
+  .story-emoji {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .story-title {
+    font-family: 'Calistoga', serif;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  .story-1 .story-title, .story-3 .story-title, .story-4 .story-title { color: var(--warm-white); }
+  .story-2 .story-title { color: var(--mocha); }
+  .story-5 .story-title { color: var(--text); }
+  .story-sub {
+    font-size: 10px;
+    margin-top: 6px;
+    opacity: 0.65;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .story-1 .story-sub, .story-3 .story-sub, .story-4 .story-sub { color: var(--warm-white); }
+  .story-2 .story-sub, .story-5 .story-sub { color: var(--mocha); }
+  .story-highlight-ring {
+    position: absolute;
+    top: 10px; left: 10px;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+
+  /* EMOJIS */
+  .emoji-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .emoji-pill {
+    background: var(--warm-white);
+    border: 1.5px solid rgba(196,118,74,0.2);
+    border-radius: 50px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--text);
+    font-weight: 600;
+  }
+  .emoji-pill span:first-child {
+    font-size: 22px;
+  }
+  .emoji-desc {
+    font-size: 11px;
+    color: var(--light-text);
+    font-weight: 400;
+  }
+
+  /* IAS */
+  .ia-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .ia-card {
+    background: var(--warm-white);
+    border-radius: 18px;
+    padding: 28px;
+    border-left: 4px solid var(--terracotta);
+  }
+  .ia-category {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .ia-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .ia-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .ia-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .ia-desc {
+    font-size: 12px;
+    color: var(--light-text);
+    line-height: 1.5;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--text);
+    padding: 50px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-title {
+    font-family: 'Calistoga', serif;
+    font-size: 28px;
+    color: var(--warm-white);
+  }
+  .footer-sub {
+    font-size: 12px;
+    color: rgba(253,249,244,0.4);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+  .footer-badge {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* DIVIDER */
+  .divider {
+    width: 60px;
+    height: 3px;
+    background: var(--terracotta);
+    border-radius: 3px;
+    margin-bottom: 30px;
+  }
+  .section-dark .divider {
+    background: var(--blush);
+  }
+
+  /* RESPONSIVE soft wrap for smaller renders */
+  @media (max-width: 800px) {
+    .posts-grid, .funnel-grid, .stories-row { grid-template-columns: 1fr 1fr; }
+    .font-demo-grid, .ia-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 42px; }
+    .section { padding: 50px 30px; }
+    .hero { padding: 60px 30px 50px; }
+    .footer { flex-direction: column; gap: 20px; padding: 40px 30px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-label">Estratégia de Conteúdo Digital · 2026</p>
+  <h1>Dra. Raíssa<br><span>Nutrologia</span><br>com propósito.</h1>
+  <p class="hero-sub">Moodboard visual · Linha editorial · Guia de identidade</p>
+</section>
+
+<!-- PALETA -->
+<section class="section">
+  <p class="section-title">Identidade Visual</p>
+  <h2 class="section-heading">Paleta de Cores</h2>
+  <div class="divider"></div>
+  <div class="palette-row">
+    <div class="swatch">
+      <div class="swatch-color" style="background:#3D5A4C;"></div>
+      <span class="swatch-name">Verde Bosque</span>
+      <span class="swatch-hex">#3D5A4C</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#8FA886;"></div>
+      <span class="swatch-name">Sálvia</span>
+      <span class="swatch-hex">#8FA886</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#FAF5EE;"></div>
+      <span class="swatch-name">Creme</span>
+      <span class="swatch-hex">#FAF5EE</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#E8C4B0; border: 1px solid #ddd;"></div>
+      <span class="swatch-name">Blush</span>
+      <span class="swatch-hex">#E8C4B0</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#C4764A;"></div>
+      <span class="swatch-name">Terracota</span>
+      <span class="swatch-hex">#C4764A</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#6B4A3A;"></div>
+      <span class="swatch-name">Mocha</span>
+      <span class="swatch-hex">#6B4A3A</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#2C1F1A;"></div>
+      <span class="swatch-name">Carvão</span>
+      <span class="swatch-hex">#2C1F1A</span>
+    </div>
+  </div>
+  <p style="font-size:13px; color:var(--light-text); line-height:1.8; max-width:600px; margin-top:10px;">
+    A paleta combina <strong>verde sóbrio e orgânico</strong> (autoridade + natureza) com <strong>tons quentes de terracota e blush</strong> (acolhimento, feminino, vida real). O resultado é uma identidade que diz: <em>ciência séria, mas humana.</em>
+  </p>
+</section>
+
+<!-- FONTES -->
+<section class="section section-dark">
+  <p class="section-title">Tipografia</p>
+  <h2 class="section-heading">Poster + Deco</h2>
+  <div class="divider"></div>
+  <div class="font-demo-grid">
+    <div class="font-card">
+      <p class="font-tag">Fonte Principal · Títulos</p>
+      <p class="font-name">POSTER → Calistoga</p>
+      <p class="font-display-poster">Nutrologia<br>de verdade.</p>
+    </div>
+    <div class="font-card">
+      <p class="font-tag">Fonte Secundária · Corpo / Destaques</p>
+      <p class="font-name">DECO → Century Gothic</p>
+      <p class="font-display-deco">O que eu nunca faria<br>como nutrologa.</p>
+    </div>
+  </div>
+
+  <p class="section-title" style="margin-top:10px;">Posts Hipotéticos</p>
+  <h2 class="section-heading" style="font-size:26px; margin-bottom:24px;">Como ficaria no feed</h2>
+  <div class="posts-grid">
+    <!-- Post 1: Topo de funil noticiário -->
+    <div class="post-mock post-1">
+      <div class="post-deco-badge">🧬</div>
+      <div class="post-accent-line"></div>
+      <p class="post-tag">Nutrologia · Evidência</p>
+      <p class="post-title post-poster">O que a ciência diz sobre jejum intermitente em 2025</p>
+    </div>
+    <!-- Post 2: POV topo de funil -->
+    <div class="post-mock post-2">
+      <div class="post-deco-badge">👩‍⚕️</div>
+      <div class="post-accent-line"></div>
+      <p class="post-tag">POV Nutrologa</p>
+      <p class="post-title post-deco">O que eu <strong>jamais</strong> tomaria<br>sem exames antes.</p>
+    </div>
+    <!-- Post 3: Fundo de funil -->
+    <div class="post-mock post-3">
+      <div class="post-deco-badge">📋</div>
+      <div class="post-accent-line"></div>
+      <p class="post-tag">Consulta · Agendamento</p>
+      <p class="post-title post-poster">Você está cuidando do seu corpo<br>ou só sobrevivendo?</p>
+    </div>
+  </div>
+</section>
+
+<!-- FUNIL EDITORIAL -->
+<section class="section section-alt">
+  <p class="section-title">Linha Editorial · Feed</p>
+  <h2 class="section-heading">O Funil de Conteúdo</h2>
+  <div class="divider"></div>
+  <div class="funnel-grid">
+    <!-- Topo -->
+    <div class="funnel-card funnel-top">
+      <span class="funnel-num">1</span>
+      <p class="funnel-label">Topo de Funil · Atração</p>
+      <p class="funnel-title">Despertar &amp; Informar</p>
+      <ul class="funnel-items">
+        <li>Noticiário + opinião técnica em nutrologia</li>
+        <li>POV series: <em>"O que eu, sendo nutrologa, jamais faria..."</em></li>
+        <li>Desmistificação de mitos populares (suplementos, dietas virais)</li>
+        <li>Notícias de saúde com sua leitura clínica</li>
+      </ul>
+    </div>
+    <!-- Meio -->
+    <div class="funnel-card funnel-mid">
+      <span class="funnel-num">2</span>
+      <p class="funnel-label">Meio de Funil · Conexão</p>
+      <p class="funnel-title">Educar &amp; Relacionar</p>
+      <ul class="funnel-items">
+        <li>Carrosséis educativos: <em>"Exames que toda mulher acima de 30 deve pedir"</em></li>
+        <li>Antes &amp; depois de condutas (sem pacientes, hipotéticos)</li>
+        <li>Rotina dela como médica + mãe (humanização estratégica)</li>
+        <li>Reels curtos com dicas práticas e aplicáveis</li>
+      </ul>
+    </div>
+    <!-- Fundo -->
+    <div class="funnel-card funnel-bot">
+      <span class="funnel-num">3</span>
+      <p class="funnel-label">Fundo de Funil · Conversão</p>
+      <p class="funnel-title">Converter &amp; Fidelizar</p>
+      <ul class="funnel-items">
+        <li>CTA direto para consulta com ancoragem emocional</li>
+        <li>Cases sem identificação: <em>"Paciente veio assim, saiu assim"</em></li>
+        <li>FAQ respondendo objeções comuns de consulta</li>
+        <li>Conteúdo sobre a experiência de ser sua paciente</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- STORIES -->
+<section class="section">
+  <p class="section-title">Linha Editorial · Stories</p>
+  <h2 class="section-heading">O que entregar nos stories</h2>
+  <div class="divider"></div>
+  <div class="stories-row">
+    <div class="story-mock story-1">
+      <div class="story-highlight-ring">🧬</div>
+      <p class="story-emoji">🔬</p>
+      <p class="story-title">Saúde com evidência</p>
+      <p class="story-sub">Opinião técnica do dia</p>
+    </div>
+    <div class="story-mock story-2">
+      <div class="story-highlight-ring">👶</div>
+      <p class="story-emoji">🍼</p>
+      <p class="story-title">Mãe + médica: a rotina real</p>
+      <p class="story-sub">Bastidores do dia a dia</p>
+    </div>
+    <div class="story-mock story-3">
+      <div class="story-highlight-ring">😂</div>
+      <p class="story-emoji">🎭</p>
+      <p class="story-title">Humor e leveza</p>
+      <p class="story-sub">Ser médica tem disso</p>
+    </div>
+    <div class="story-mock story-4">
+      <div class="story-highlight-ring">🎸</div>
+      <p class="story-emoji">🎸</p>
+      <p class="story-title">Raíssa fora do jaleco</p>
+      <p class="story-sub">Violão · Livros · Vida</p>
+    </div>
+    <div class="story-mock story-5">
+      <div class="story-highlight-ring">📋</div>
+      <p class="story-emoji">📋</p>
+      <p class="story-title">Agenda aberta</p>
+      <p class="story-sub">CTA suave p/ consulta</p>
+    </div>
+  </div>
+  <p style="font-size:12px; color:var(--light-text); margin-top:20px; line-height:1.8; max-width:700px;">
+    <strong>Estratégia de Highlights:</strong> 🧬 Nutrologia · 👶 Mãe · 😂 Humor · 🎸 Eu · 📋 Consultas · ❓ FAQ
+  </p>
+</section>
+
+<!-- EMOJIS -->
+<section class="section section-alt">
+  <p class="section-title">Identidade Visual · Comunicação</p>
+  <h2 class="section-heading">Emojis da Identidade</h2>
+  <div class="divider"></div>
+  <div class="emoji-grid">
+    <div class="emoji-pill"><span>🧬</span><div><div>DNA / Ciência</div><div class="emoji-desc">Nutrologia, evidência, pesquisa</div></div></div>
+    <div class="emoji-pill"><span>🌿</span><div><div>Natureza / Equilíbrio</div><div class="emoji-desc">Estilo de vida, autocuidado</div></div></div>
+    <div class="emoji-pill"><span>👩‍⚕️</span><div><div>Médica</div><div class="emoji-desc">Autoridade com leveza</div></div></div>
+    <div class="emoji-pill"><span>📋</span><div><div>Prescrição / Organização</div><div class="emoji-desc">Consultas, protocolos</div></div></div>
+    <div class="emoji-pill"><span>💚</span><div><div>Verde · Saúde</div><div class="emoji-desc">Tom da marca, bem-estar</div></div></div>
+    <div class="emoji-pill"><span>🧠</span><div><div>Mente / Cognição</div><div class="emoji-desc">Saúde mental, foco, energia</div></div></div>
+    <div class="emoji-pill"><span>🏃‍♀️</span><div><div>Movimento</div><div class="emoji-desc">Exercício, vitalidade</div></div></div>
+    <div class="emoji-pill"><span>📚</span><div><div>Conhecimento</div><div class="emoji-desc">Educação médica, livros</div></div></div>
+    <div class="emoji-pill"><span>☀️</span><div><div>Vitamina D / Leveza</div><div class="emoji-desc">Rotina saudável, humor</div></div></div>
+    <div class="emoji-pill"><span>🎸</span><div><div>Personalidade</div><div class="emoji-desc">Violão, lado humano</div></div></div>
+  </div>
+</section>
+
+<!-- IAS -->
+<section class="section">
+  <p class="section-title">Ferramentas</p>
+  <h2 class="section-heading">IAs que vão te ajudar</h2>
+  <div class="divider"></div>
+  <div class="ia-grid">
+    <div class="ia-card">
+      <p class="ia-category">✍️ Redação de Conteúdo</p>
+      <div class="ia-items">
+        <div class="ia-item">
+          <span class="ia-name">ChatGPT / Claude</span>
+          <span class="ia-desc">Criar legendas, roteiros de reels, carrosséis e CTAs. Claude é ótimo para tom mais refinado e técnico.</span>
+        </div>
+        <div class="ia-item">
+          <span class="ia-name">Notion AI</span>
+          <span class="ia-desc">Organizar calendário editorial, resumir temas e planejar séries de conteúdo.</span>
+        </div>
+      </div>
+    </div>
+    <div class="ia-card" style="border-left-color: var(--sage);">
+      <p class="ia-category" style="color:var(--deep-green);">💡 Ideias para Conteúdo</p>
+      <div class="ia-items">
+        <div class="ia-item">
+          <span class="ia-name">Perplexity AI</span>
+          <span class="ia-desc">Pesquisar tendências e novidades em nutrologia com fontes confiáveis para embasar seus posts.</span>
+        </div>
+        <div class="ia-item">
+          <span class="ia-name">Claude (você está aqui!)</span>
+          <span class="ia-desc">Gerar ideias de pautas, séries temáticas e roteiros baseados no seu briefing e especialidade.</span>
+        </div>
+      </div>
+    </div>
+    <div class="ia-card" style="border-left-color: var(--mocha);">
+      <p class="ia-category" style="color:var(--mocha);">🎨 Design</p>
+      <div class="ia-items">
+        <div class="ia-item">
+          <span class="ia-name">Canva + Magic Design</span>
+          <span class="ia-desc">Criar posts, carrosséis e stories com IA integrada. Ideal para quem está começando sem editor.</span>
+        </div>
+        <div class="ia-item">
+          <span class="ia-name">Adobe Firefly</span>
+          <span class="ia-desc">Gerar imagens e fundos personalizados para posts sem precisar de banco de imagens.</span>
+        </div>
+      </div>
+    </div>
+    <div class="ia-card" style="border-left-color: var(--deep-green);">
+      <p class="ia-category" style="color:var(--deep-green);">🎬 Edição de Vídeo</p>
+      <div class="ia-items">
+        <div class="ia-item">
+          <span class="ia-name">CapCut (com IA)</span>
+          <span class="ia-desc">Você já usa! Explorar legendas automáticas, remoção de fundo e templates de reels.</span>
+        </div>
+        <div class="ia-item">
+          <span class="ia-name">Captions.ai</span>
+          <span class="ia-desc">Edição de vídeo por IA com legendas automáticas estilizadas, cortes e efeitos. Muito usado por médicos criadores.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div>
+    <p class="footer-title">Dra. Raíssa</p>
+    <p class="footer-sub">Nutrologia · Maternidade · Estilo de vida</p>
+  </div>
+  <p class="footer-badge">Moodboard · 2026</p>
+</footer>
+
+</body>
+</html>
